@@ -1,0 +1,132 @@
+
+
+#navbar {
+    background: linear-gradient(to bottom right, rgba(253, 111, 45, 1), rgba(248, 58, 94, 1));
+	
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+  }
+ 
+  #navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  #navbar li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+  }
+  
+  #navbar li a:hover,
+  #navbar .menu-btn:hover {
+    background-color: #f4f4f4;
+  }
+  
+  #navbar .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 20px 20px;
+    text-decoration: none;
+  }
+  
+  
+  #navbar .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    background: linear-gradient(to bottom right, rgba(253, 111, 45, 1), rgba(248, 58, 94, 1));
+	  
+}
+  
+  
+  #navbar .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  #navbar .menu-icon .nav-icon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  #navbar .menu-icon .nav-icon:before,
+  #navbar .menu-icon .nav-icon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  #navbar .menu-icon .nav-icon:before {
+    top: 5px;
+  }
+  
+  #navbar .menu-icon .nav-icon:after {
+    top: -5px;
+  }
+  
+  
+  #navbar .menu-btn {
+    display: none;
+  }
+  
+  #navbar .menu-btn:checked ~ .menu {
+    max-height: 350px;
+  }
+  
+  #navbar .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+  }
+  
+  #navbar .menu-btn:checked ~ .menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+    top:0;
+  }
+  
+  #navbar .menu-btn:checked ~ .menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top:0;
+  }
+  
+  
+  
+  @media (min-width: 48em) {
+    #navbar li {
+      float: left;
+      background: linear-gradient(to bottom right, rgba(253, 111, 45, 1), rgba(248, 58, 94, 1));
+	
+    }
+    #navbar li a {
+      padding: 20px 30px;
+      background: linear-gradient(to bottom right, rgba(253, 111, 45, 1), rgba(248, 58, 94, 1));
+	
+    }
+    #navbar .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+      background: linear-gradient(to bottom right, rgba(253, 111, 45, 1), rgba(248, 58, 94, 1));
+	
+    }
+    #navbar .menu-icon {
+      display: none;
+    }
+  }
+  
